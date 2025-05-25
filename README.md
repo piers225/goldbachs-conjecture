@@ -52,27 +52,3 @@ The program consists of two main functions:
 2. `find_goldbach_pairs(n)` - Finds all prime pairs that sum to n
 
 The algorithm uses an iterative approach to check potential prime pairs, ensuring efficiency for reasonable input values.
-
-## Example Output
-
-For input `100`, the program outputs:
-```
-100 = 3 + 97
-100 = 11 + 89
-100 = 17 + 83
-100 = 29 + 71
-100 = 41 + 59
-100 = 47 + 53
-```
-
-Each line represents a unique pair of prime numbers that sum to the input value.
-
-## Contributing
-
-Pull requests are welcome! Consider adding:
-- Additional optimization techniques
-- Support for odd numbers
-- Interactive mode
-- Performance benchmarks
-
-Please ensure all contributions maintain the existing coding style and include proper test cases.
