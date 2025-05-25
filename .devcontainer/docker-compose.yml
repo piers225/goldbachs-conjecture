@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    c-goldbach-conjecture:
+      build: 
+        context: .
+        dockerfile: DockerFile
+      volumes:
+        - ../:/app
+      environment:
+        - TZ=UTC
+      tty: true
+      networks:
+        - piers_dev_network
+networks:
+  piers_dev_network:
+    external: true
