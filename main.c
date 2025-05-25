@@ -3,13 +3,22 @@
 #include <stdbool.h>
 #include <math.h> 
 
-int main() {
+int main(int argc, char *argv[]) {
     int limit;
 
-    printf("Enter the upper limit (even number >= 4) to verify Goldbach's Conjecture: ");
-    if (scanf("%d", &limit) != 1 || limit < 4) {
-         printf("Invalid input. Limit must be an integer >= 4.\n");
-         return 1;
+    if (argc == 2) {
+        limit = atoi(argv[1]);
+    } else {
+        printf("Enter the upper limit (even number >= 4) to verify Goldbach's Conjecture: ");
+        if (scanf("%d", &limit) != 1) {
+            printf("Invalid input. Must enter a number.\n");
+            return 1;
+        }
+    }
+
+    if (limit < 4) {
+        printf("Invalid input. Limit must be an integer >= 4.\n");
+        return 1;
     }
 
     bool *is_prime_lookup = (bool *)calloc(limit + 1, sizeof(bool));
